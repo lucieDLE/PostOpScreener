@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="20dp"
+    android:paddingTop="10dp"
+    tools:context=".ui.assessment.AssessmentFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAssessment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:id="@+id/tvEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Data Found!"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:textSize="18sp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fbAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        app:elevation="0dp"
+        android:src="@drawable/ic_add"
+        android:contentDescription="Add Assessment"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fbDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/fbAdd"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/orange"
+        android:contentDescription="Delete All Assessment"
+        android:src="@drawable/ic_delete"
+        android:visibility="gone"
+        app:borderWidth="0dp"
+        app:elevation="0dp"
+        app:tint="@android:color/white" />
+
+</RelativeLayout>

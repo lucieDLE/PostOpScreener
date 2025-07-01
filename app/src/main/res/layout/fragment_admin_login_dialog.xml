@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.AdminLoginDialogFragment"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:text="Enable Admin Mode"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hintEnabled="false"
+        app:errorEnabled="true"
+        android:layout_marginTop="20dp"
+        app:passwordToggleTint="@color/black"
+        app:passwordToggleEnabled="true">
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Admin Password"
+            android:inputType="textPassword"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectangle_border"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_cancel"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:textColor="@color/black"
+            android:textAllCaps="true"
+            app:cornerRadius="8dp"
+            app:rippleColor="#90858585"
+            app:strokeColor="@color/gray"
+            app:strokeWidth="2dp" />
+        <Button
+            android:id="@+id/btn_enable"
+            android:layout_width="0dp"
+            android:layout_weight="0.6"
+            android:layout_height="wrap_content"
+            android:text="Enable"
+            android:background="@color/colorPrimary"
+            android:layout_gravity="right"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

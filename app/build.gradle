@@ -1,0 +1,146 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'de.undercouch.download'
+}
+
+android {
+    compileSdkVersion 32
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "org.rti.ttfinder"
+        minSdkVersion  21
+        targetSdkVersion 32
+        versionCode 2425
+        versionName "24.2.5"
+        multiDexEnabled true
+        //vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            applicationIdSuffix ".debug"
+            debuggable true
+        }
+    }
+    buildFeatures {
+        mlModelBinding true
+        viewBinding true
+    }
+    packagingOptions {
+        jniLibs {
+            pickFirsts += ['**/*.so']
+        }
+    }
+
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4G"
+    }
+    namespace 'org.rti.ttfinder'
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.6.0'
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
+    implementation 'androidx.navigation:navigation-fragment:2.3.5'
+    implementation 'androidx.navigation:navigation-ui:2.3.5'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
+    // Concurrent library for asynchronous coroutines
+    implementation 'androidx.concurrent:concurrent-futures-ktx:1.1.0'
+
+    //ML
+    implementation 'org.tensorflow:tensorflow-lite:2.16.1'
+    implementation 'org.tensorflow:tensorflow-lite-select-tf-ops:2.16.1'
+    implementation 'org.tensorflow:tensorflow-lite-gpu:2.16.1'
+    implementation 'org.tensorflow:tensorflow-lite-support:0.4.4'
+    implementation 'org.tensorflow:tensorflow-lite-metadata:0.4.4'
+
+    implementation 'org.pytorch:pytorch_android_lite:1.12.1'
+    implementation 'org.pytorch:pytorch_android_torchvision_lite:1.12.1'
+    implementation 'androidx.work:work-runtime:2.7.1'
+
+    def camerax_version = "1.1.0-beta03"
+    // CameraX core library using camera2 implementation
+    implementation "androidx.camera:camera-camera2:$camerax_version"
+    // CameraX Lifecycle Library
+    implementation "androidx.camera:camera-lifecycle:$camerax_version"
+    // CameraX View class
+    implementation "androidx.camera:camera-view:$camerax_version"
+
+    //Testing
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    //Form Validation
+    implementation 'com.mobsandgeeks:android-saripaar:2.0.3'
+
+    //WindowManager
+    implementation 'androidx.window:window:1.0.0-alpha09'
+
+    // room persistence database
+    def room_version = "2.4.0-alpha03"
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+
+    //Permission handle
+    implementation 'com.karumi:dexter:4.2.0'
+
+    implementation 'com.google.code.gson:gson:2.8.7'
+
+    implementation ("com.opencsv:opencsv:5.3")
+
+    implementation 'me.dm7.barcodescanner:zbar:1.9.3'
+    implementation 'me.dm7.barcodescanner:zxing:1.9.3'
+
+    implementation 'com.github.warkiz.widget:indicatorseekbar:2.1.2'
+
+    api 'com.otaliastudios:cameraview:2.7.2'
+
+    implementation 'com.quickbirdstudios:opencv:4.5.3.0'
+
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+
+
+}
+
+//task downloadZipFile(type: Download) {
+//    src 'https://github.com/juanprietob/trachoma/releases/download/'+project.property('model.version')+'/Models_'+project.property('model.version')+'.zip'
+//    println src
+//    onlyIfModified true
+//    dest new File(buildDir, 'Models.zip')
+//}
+
+//task downloadAndUnzipFile(dependsOn: downloadZipFile, type: Copy) {
+//
+//    delete fileTree('src/main/ml') {
+//        include '*.tflite'
+//        include ".ptl"
+//    }
+//
+//    from zipTree(downloadZipFile.dest)
+//    into "src/main/ml"
+//}
+
+//afterEvaluate {
+//    preBuild.dependsOn downloadAndUnzipFile
+//}
+

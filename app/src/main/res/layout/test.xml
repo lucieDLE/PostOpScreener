@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.otaliastudios.cameraview.CameraView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cameraPictureSizeMinWidth="2000"
+        app:cameraPictureSizeMinHeight="2000"
+        app:cameraPictureSizeMaxWidth="2000"
+        app:cameraPictureSizeMaxHeight="2000"
+        app:cameraPictureSizeMinArea="2000"
+        app:cameraPictureSizeMaxArea="2000"
+        app:cameraPictureSizeBiggest="true"
+        app:cameraGestureTap="none"
+        app:cameraGestureLongTap="none"
+        app:cameraGesturePinch="none"
+        app:cameraGestureScrollHorizontal="none"
+        app:cameraGestureScrollVertical="none"
+        app:cameraEngine="camera2"
+        app:cameraPreview="surface"
+        app:cameraPreviewFrameRateExact="true"
+        app:cameraFacing="back"
+        app:cameraHdr="on"
+        app:cameraFlash="off"
+        app:cameraMode="picture"
+        app:cameraGrid="draw4x4"
+        app:cameraPlaySounds="false"
+        app:cameraAutoFocusMarker="@string/cameraview_default_autofocus_marker"
+        app:cameraUseDeviceOrientation="true"
+        app:cameraPictureMetering="true"
+        app:cameraPictureSnapshotMetering="true"
+        app:cameraPictureFormat="jpeg"
+        app:cameraRequestPermissions="true">
+
+    </com.otaliastudios.cameraview.CameraView>
+
+</LinearLayout>

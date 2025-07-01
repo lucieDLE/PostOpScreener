@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">TT Screener</string>
+    <string name="squarecamera__request_write_storage_permission_text">Stroage permission needed</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Screening</string>
+    <string name="title_dashboard">Utilities</string>
+    <string name="title_notifications">About</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="one_to_three"><![CDATA[< 1/3]]></string>
+    <string name="_1_3_to_2_3">1/3 to 2/3</string>
+
+    <string name="folder_name">TTScreener</string>
+
+    <string name="autofocus_on">Autofocus activated</string>
+    <string name="autofocus_off">Autofocus deactivated</string>
+    <string name="consents">This participant consents to participate in the study and have photos taken of their upper eyelids.</string>
+    <string name="link_record">Link Record</string>
+    <string name="scan_qr_code">Scan QR Code</string>
+    <string name="tt_tracker_id_hint">Or\nEnter the TT Tracker ID</string>
+    <string name="enter_id">Enter ID</string>
+    <string name="capture_gps_location">Capture GPS Location</string>
+    <string name="capture_gps_hint">You may need to be outside for the best accuracy</string>
+    <string name="tt_right_eye_hint">Does participant have TT in their right eye?</string>
+    <string name="tt_left_eye_hint">Does participant have TT in their left eye?</string>
+    <string name="grade">Grade</string>
+    <string name="right_eye">Right Eye</string>
+    <string name="capture_image">Capture Image</string>
+    <string name="left_eye">Left Eye</string>
+    <string name="save">Save</string>
+    <string name="grade_image_hint">This will grade all of the images that have been queued. Depending on the number of image this may take several minutes.</string>
+    <string name="grade_image">Grade Image</string>
+    <string name="debug">Debug</string>
+    <string name="debug_enable_hint">When this is enabled additional logging will be available.</string>
+    <string name="export">Export</string>
+    <string name="automatic_grading">Automatic Grading</string>
+    <string name="when_this_is_enabled_images_are_graded_automatically_after_they_are_captured">When this is enabled images are graded automatically after they are captured.</string>
+    <string name="export_image_and_log_files_to_the_device_for_transferring_to_a_computer">Export image and log files to the device for transferring to a computer.</string>
+
+    <string name="queue_added_msg">Added to queue successfully!</string>
+    <string name="not_confirmed">Not Confirmed</string>
+    <string name="confirmed">Confirmed</string>
+    <string name="tt_screening_question">This will add some extra questions during the screening process.</string>
+    <string name="include_tt_screening_questions">Include TT Screening Questions</string>
+    <string name="adjudication">Adjudication</string>
+    <string name="adjudication_hint">Verify agreement between screening questions responses and grading.</string>
+    <string-array name="lashes_locations_entry">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string name="answer_validation_msg">Please select an answer!</string>
+    <string name="left_eye_mismatch_msg">Please select an answer as your left image mismatch!</string>
+    <string name="right_eye_mismatch_msg">Please select an answer as your right image mismatch!</string>
+    <string name="tt_id_empty_error_msg">Please scan QR code or enter id!</string>
+    <string name="tt_id_exist_error_msg">TT Tracker ID is already exists!</string>
+    <string name="consent_error_msg">Please confirm consent</string>
+    <string name="mismatch_hint">There is a mismatch between the algorithmic result and the answer to the question you have provided.</string>
+    <string name="blurry_msg">The image is blurry, do you want to retake?</string>
+</resources>
